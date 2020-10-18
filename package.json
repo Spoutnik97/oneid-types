@@ -2,8 +2,5 @@
   "name": "oneid-types",
   "version": "1.0.0",
   "main": "index.ts",
-  "license": "MIT",
-  "dependencies": {
-    "@types/react-native": "^0.63.25"
-  }
+  "license": "MIT"
 }
