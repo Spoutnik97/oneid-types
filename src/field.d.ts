@@ -21,18 +21,25 @@ export interface DEPRECATED_PickerField {
 
 type StringFieldType =
   | "text"
+  | "multiline"
   | "password"
   | "divider"
   | "comment"
   | "document"
   | "picker"
   | "price"
-  | "qcm";
+  | "qcm"
+  | "link";
+
 type NumberFieldType = "mark";
 type DateFieldType = "date";
 type BooleanFieldType = "switch";
 
-export type FieldType = StringFieldType | NumberFieldType | DateFieldType | BooleanFieldType;
+export type FieldType =
+  | StringFieldType
+  | NumberFieldType
+  | DateFieldType
+  | BooleanFieldType;
 
 /**
  * @deprecated
@@ -40,13 +47,14 @@ export type FieldType = StringFieldType | NumberFieldType | DateFieldType | Bool
 export type DEPRECATED_OneIDField = Field | PickerField | PriceField;
 
 type BasicField = {
+  type: FieldType;
   key: string;
   title: string;
   required?: boolean;
 };
 
 export interface TextField extends BasicField {
-  type: "text" | "comment" | "divider" | "password";
+  type: "text" | "comment" | "divider" | "password" | "multiline";
 }
 
 export interface PickerField extends BasicField {
@@ -75,16 +83,22 @@ export interface DateField extends BasicField {
   type: "date";
 }
 
-
 export interface BooleanField extends BasicField {
   type: "switch";
 }
 
+export interface LinkField extends BasicField {
+  type: "link";
+  value: string;
+  required: false | undefined;
+}
+
 export type OneIDField =
   | TextField
+  | LinkField
   | PickerField
   | PriceField
   | NumberField
   | DateField
   | DocumentField
-  | BooleanField;
+  | BooleanField;
