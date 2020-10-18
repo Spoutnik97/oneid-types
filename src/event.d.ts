@@ -8,6 +8,7 @@ export type PaymentOptionsType = {
 };
 
 export interface OneIDEvent {
+  version?: number;
   proservice: string;
   name: string;
   organizer: string;
@@ -18,7 +19,7 @@ export interface OneIDEvent {
   isNotRequired: OneIDField[]; // @deprecated
   paymentOptions: PaymentOptionsType;
   idDocument: boolean;
-  generate_contract: boolean;
+  generateContract: boolean;
   editEnabled: boolean;
   color: string | null;
   description: string | null;
