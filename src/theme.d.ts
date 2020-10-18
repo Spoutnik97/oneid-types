@@ -1,3 +1,5 @@
+import { TextStyle } from "react-native";
+
 export type ThemeConfig = {
   API_URI: string;
   ENV: "dev" | "prod";
@@ -35,6 +37,10 @@ export interface Theme {
     fontFamily: {
       regular: string;
     };
+    text: TextStyle;
+    header: TextStyle;
+    subHeader: TextStyle;
+    label: TextStyle;
   };
   config: ThemeConfig;
 }
