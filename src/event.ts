@@ -35,5 +35,6 @@ export interface OneIDEvent {
 
 export type EventSettings = {
   teammates?: Teammate[];
+  userCounter?: number;
   admin: string;
 };
