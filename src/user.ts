@@ -5,6 +5,7 @@ export interface Payment {
   totalPaid: number;
   totalToPay: number;
   pending?: string;
+  tickets?: string[];
 }
 
 /**
