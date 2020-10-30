@@ -1,3 +1,5 @@
+import { ActivityOrder } from "./activity";
+
 export interface Payment {
   transactionIds: string[];
   amounts: number[];
@@ -27,8 +29,11 @@ export interface UserAccount {
   oneid: string;
   proservice: string;
   config: {
-    allotment: string | null;
-    validated: boolean;
+    allotment: {
+      id: string | null;
+      isValidated: boolean;
+    };
+    activities: ActivityOrder[];
     expoPushToken?: string;
   };
   fields: {
