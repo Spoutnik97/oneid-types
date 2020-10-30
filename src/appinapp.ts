@@ -6,9 +6,10 @@ export enum AppInAppSectionTypes {
   contacts = "contacts",
   meetings = "meetings",
   maps = "maps",
-  informations = "informations"
+  informations = "informations",
 }
 export interface Contact {
+  id: string;
   name: string;
   role: string;
   phone: string;
@@ -16,6 +17,7 @@ export interface Contact {
   color: string;
 }
 export interface News {
+  id: string;
   title: string;
   description: string;
   date: number;
@@ -30,12 +32,14 @@ export interface AllotmentCondition {
 }
 
 export interface Member {
+  id: string;
   oneid: string;
   given_name: string;
   family_name: string;
 }
 
 export interface Allotment {
+  id: string;
   name: string;
   capacity: number;
   description: string;
@@ -46,6 +50,7 @@ export interface Allotment {
 }
 
 export interface Meeting {
+  id: string;
   name: string;
   description?: string;
   startTime: number;
@@ -55,6 +60,7 @@ export interface Meeting {
 }
 
 export interface Map {
+  id: string;
   title: string;
   source: string;
   type: string;
