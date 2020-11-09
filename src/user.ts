@@ -1,9 +1,9 @@
 import { ActivityOrder } from "./activity";
 
 export interface Payment {
-  transactionIds: string[];
-  amounts: number[];
-  dates: number[];
+  transactionIds?: string[];
+  amounts?: number[];
+  dates?: number[];
   totalPaid: number;
   totalToPay: number;
   pending?: string;
