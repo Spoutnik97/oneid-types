@@ -10,6 +10,16 @@ export interface Payment {
   tickets?: string[];
 }
 
+export type PaymentRequest = {
+  amount: number;
+  date: number;
+  oneid: string;
+  paymentTicket: string;
+  proservice: string;
+  request_uuid: string;
+  status: "done" | "waiting" | "failed";
+};
+
 /**
  * User in the OneID app
  */
@@ -35,6 +45,7 @@ export interface UserAccount {
     };
     activities: ActivityOrder[];
     expoPushToken?: string;
+    nfcUid?: string;
   };
   fields: {
     [key: string]: string;
