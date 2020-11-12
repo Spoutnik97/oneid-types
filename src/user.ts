@@ -39,11 +39,11 @@ export interface UserAccount {
   oneid: string;
   proservice: string;
   config: {
-    allotment: {
+    allotment?: {
       id: string | null;
       isValidated: boolean;
     };
-    activities: ActivityOrder[];
+    activities?: ActivityOrder[];
     expoPushToken?: string;
     nfcUid?: string;
   };

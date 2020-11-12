@@ -17,23 +17,36 @@ export type ThemeConfig = {
   LYDIA_PHONE_HOMOLOGUATION: string;
 };
 
-export interface Theme {
-  colors: {
-    primary: string;
-    primarydark: string;
-    primarylight: string;
-    dark: string;
-    darklighter: string;
-    darklightest: string;
-    secondarydark: string;
-    secondary: string;
-    secondarylight: string;
-    label: string;
-    accent: string;
-    error: string;
-    success: string;
-    pending: string;
+export type Colors = {
+  primary: string;
+  primarydark: string;
+  primarylight: string;
+  secondarydark: string;
+  secondary: string;
+  secondarylight: string;
+  dark: string;
+  light: string;
+  label: string;
+  accent: string;
+  error: string;
+  success: string;
+  pending: string;
+  palette: {
+    blueDark: string;
+    blue: string;
+    purple: string;
+    red: string;
+    orange: string;
+    yellow: string;
+    green: string;
+    teal: string;
+    greyLight: string;
+    greyDark: string;
   };
+};
+
+export interface Theme {
+  colors: Colors;
   font: {
     fontFamily: {
       regular: string;
