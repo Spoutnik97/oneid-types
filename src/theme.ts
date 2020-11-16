@@ -4,7 +4,6 @@ import { TextStyle } from "react-native";
 export type ThemeConfig = {
   API_URI: string;
   ENV: "dev" | "prod";
-  VERSION: string;
   NAME: string;
   documentLabels: string[];
   email: string;
