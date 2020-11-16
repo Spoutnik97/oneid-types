@@ -7,6 +7,10 @@ export type PaymentOptionsType = {
   vendorToken: string | null;
 };
 
+/**
+ * @param version if version is too low, user cannot sign up to the event
+ */
+
 export interface OneIDEvent {
   version?: number;
   proservice: string;
@@ -15,7 +19,7 @@ export interface OneIDEvent {
   logo: string;
   admin: string; // uid of the administrator
   askFields: OneIDField[];
-  isNotAsked: OneIDField[];
+  isNotAsked: OneIDField[]; // @deprecated
   isNotRequired: OneIDField[]; // @deprecated
   paymentOptions: PaymentOptionsType;
   idDocument: boolean;
@@ -31,6 +35,8 @@ export interface OneIDEvent {
   remoteApi: string | null;
   cguLink: string | null;
   onlyMobile: boolean;
+  hasAllotment?: boolean;
+  paymenDisabled?: boolean;
 }
 
 export type EventSettings = {
