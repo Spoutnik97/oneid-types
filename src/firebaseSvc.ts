@@ -5,7 +5,10 @@ export type FirebaseSvcType = {
   }: {
     email: string;
     password: string;
-  }) => Promise<{ user: { uid: string; email: string }; idToken?: string }>;
+  }) => Promise<{
+    user: { uid: string; email: string | null } | null;
+    idToken?: string;
+  }>;
   createUser: (user: {
     email: string;
     password: string;
