@@ -36,7 +36,7 @@ export interface OneIDEvent {
   cguLink: string | null;
   onlyMobile: boolean;
   hasAllotment?: boolean;
-  paymenDisabled?: boolean;
+  paymentDisabled?: boolean;
 }
 
 export type EventSettings = {
