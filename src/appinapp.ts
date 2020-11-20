@@ -47,6 +47,7 @@ export interface Allotment {
   members: Member[];
   validated: boolean;
   color: string;
+  responsibleUid?: string;
 }
 
 export interface Meeting {
