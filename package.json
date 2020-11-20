@@ -5,8 +5,7 @@
   "types": "lib/index.d.ts",
   "license": "MIT",
   "scripts": {
-    "build": "yarn tsc",
-    "deploy": "yarn build && git push"
+    "build": "yarn tsc"
   },
   "dependencies": {
     "typescript": "^4.1.2"
