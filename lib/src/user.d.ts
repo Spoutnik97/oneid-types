@@ -48,3 +48,4 @@ export interface UserAccount {
     };
     payment: Payment;
 }
+//# sourceMappingURL=user.d.ts.map

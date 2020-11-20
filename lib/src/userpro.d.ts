@@ -64,3 +64,4 @@ export interface UserPro {
     };
 }
 export {};
+//# sourceMappingURL=userpro.d.ts.map

@@ -40,16 +40,17 @@ export declare type Colors = {
         greyDark: string;
     };
 };
+export declare type Fonts = {
+    fontFamily: Record<string, string>;
+    fontSize: Record<string, number>;
+    text?: TextStyle;
+    header?: TextStyle;
+    subHeader?: TextStyle;
+    label?: TextStyle;
+};
 export interface Theme {
     colors: Colors;
-    font: {
-        fontFamily: {
-            regular: string;
-        };
-        text: TextStyle;
-        header: TextStyle;
-        subHeader: TextStyle;
-        label: TextStyle;
-    };
+    font: Fonts;
     config: ThemeConfig;
 }
+//# sourceMappingURL=theme.d.ts.map

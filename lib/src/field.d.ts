@@ -66,3 +66,4 @@ export interface LinkField extends BasicField {
 }
 export declare type OneIDField = TextField | LinkField | PickerField | PriceField | NumberField | DateField | DocumentField | BooleanField;
 export {};
+//# sourceMappingURL=field.d.ts.map

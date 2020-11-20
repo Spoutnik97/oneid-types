@@ -40,3 +40,4 @@ export declare type EventSettings = {
     userCounter?: number;
     admin: string;
 };
+//# sourceMappingURL=event.d.ts.map

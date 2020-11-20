@@ -26,3 +26,4 @@ export declare type FirebaseSvcType = {
     resetPassword: (email: string) => Promise<void>;
     transaction: (ref: string, fct: (item: any | null) => void) => Promise<void>;
 };
+//# sourceMappingURL=firebaseSvc.d.ts.map

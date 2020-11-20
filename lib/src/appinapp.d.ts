@@ -61,3 +61,4 @@ export interface Map {
     type: string;
 }
 export declare type AppInAppDataType = Meeting | Allotment | Contact | News | Map;
+//# sourceMappingURL=appinapp.d.ts.map
