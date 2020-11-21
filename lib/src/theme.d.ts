@@ -41,8 +41,20 @@ export declare type Colors = {
     };
 };
 export declare type Fonts = {
-    fontFamily: Record<string, string>;
-    fontSize: Record<string, number>;
+    fontFamily: {
+        asap: string;
+        regular: string;
+        light: string;
+        lightItalic: string;
+        semiBold: string;
+    };
+    fontSize: {
+        xs: number;
+        s: number;
+        m: number;
+        l: number;
+        xl: number;
+    };
     text?: TextStyle;
     header?: TextStyle;
     subHeader?: TextStyle;
