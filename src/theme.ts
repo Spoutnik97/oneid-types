@@ -44,14 +44,16 @@ export type Colors = {
   };
 };
 
+export type FontFamily = {
+  asap: string;
+  regular: string;
+  light: string;
+  lightItalic: string;
+  semiBold: string;
+};
+
 export type Fonts = {
-  fontFamily: {
-    asap: string;
-    regular: string;
-    light: string;
-    lightItalic: string;
-    semiBold: string;
-  };
+  fontFamily: FontFamily;
   fontSize: {
     xs: number;
     s: number;
