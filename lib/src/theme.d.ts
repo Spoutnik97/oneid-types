@@ -1,4 +1,3 @@
-import { TextStyle } from "react-native";
 export declare type ThemeConfig = {
     API_URI: string;
     ENV: "dev" | "prod";
@@ -40,14 +39,15 @@ export declare type Colors = {
         greyDark: string;
     };
 };
+export declare type FontFamily = {
+    asap: string;
+    regular: string;
+    light: string;
+    lightItalic: string;
+    semiBold: string;
+};
 export declare type Fonts = {
-    fontFamily: {
-        asap: string;
-        regular: string;
-        light: string;
-        lightItalic: string;
-        semiBold: string;
-    };
+    fontFamily: FontFamily;
     fontSize: {
         xs: number;
         s: number;
@@ -55,10 +55,10 @@ export declare type Fonts = {
         l: number;
         xl: number;
     };
-    text?: TextStyle;
-    header?: TextStyle;
-    subHeader?: TextStyle;
-    label?: TextStyle;
+    text?: any;
+    header?: any;
+    subHeader?: any;
+    label?: any;
 };
 export interface Theme {
     colors: Colors;
