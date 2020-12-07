@@ -1,6 +1,3 @@
-// @ts-ignore
-import { TextStyle } from "react-native";
-
 export type ThemeConfig = {
   API_URI: string;
   ENV: "dev" | "prod";
@@ -61,10 +58,10 @@ export type Fonts = {
     l: number;
     xl: number;
   };
-  text?: TextStyle;
-  header?: TextStyle;
-  subHeader?: TextStyle;
-  label?: TextStyle;
+  text?: any;
+  header?: any;
+  subHeader?: any;
+  label?: any;
 };
 
 export interface Theme {
