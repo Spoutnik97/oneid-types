@@ -56,14 +56,15 @@ export interface UserPermissions {
   MANAGE_ALLOTMENTS?: boolean;
 }
 
-export type PlanType = "standard" | "premium" | "business";
+export type PlanType = "standard" | "pro" | "premium";
 
 export interface UserPro {
   uid: string;
   oneid: string;
   email: string;
-  plan: string;
+  plan: PlanType;
   idToken: string;
+  events: string[];
   eventsOptions?: {
     [proservice: string]: {
       permissions: UserPermissions;
