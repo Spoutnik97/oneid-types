@@ -37,6 +37,8 @@ export interface OneIDEvent {
   onlyMobile: boolean;
   hasAllotment?: boolean;
   paymentDisabled?: boolean;
+  backgroundUrl?: string;
+  startTime?: number;
 }
 
 export type EventSettings = {
