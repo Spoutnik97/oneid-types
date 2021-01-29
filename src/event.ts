@@ -1,5 +1,5 @@
 import { OneIDField } from "./field";
-import { Teammate } from "./userpro";
+import { PlanType, Teammate } from "./userpro";
 
 export type PaymentOptionsType = {
   mode: number;
@@ -13,6 +13,7 @@ export type PaymentOptionsType = {
 
 export interface OneIDEvent {
   version?: number;
+  plan?: PlanType;
   proservice: string;
   name: string;
   organizer: string;
