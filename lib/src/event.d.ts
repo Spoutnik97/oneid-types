@@ -1,5 +1,5 @@
 import { OneIDField } from "./field";
-import { Teammate } from "./userpro";
+import { PlanType, Teammate } from "./userpro";
 export declare type PaymentOptionsType = {
     mode: number;
     fixedPrice: number;
@@ -10,6 +10,7 @@ export declare type PaymentOptionsType = {
  */
 export interface OneIDEvent {
     version?: number;
+    plan?: PlanType;
     proservice: string;
     name: string;
     organizer: string;
@@ -34,6 +35,8 @@ export interface OneIDEvent {
     onlyMobile: boolean;
     hasAllotment?: boolean;
     paymentDisabled?: boolean;
+    backgroundUrl?: string;
+    startTime?: number;
 }
 export declare type EventSettings = {
     teammates?: Teammate[];
