@@ -17,7 +17,7 @@ export interface DEPRECATED_PickerField {
     values: string[];
     prices?: number[];
 }
-declare type StringFieldType = "text" | "multiline" | "password" | "divider" | "comment" | "document" | "picker" | "price" | "qcm" | "link";
+declare type StringFieldType = "text" | "multiline" | "password" | "divider" | "comment" | "document" | "picker" | "price" | "qcm" | "link" | "color";
 declare type NumberFieldType = "mark";
 declare type DateFieldType = "date";
 declare type BooleanFieldType = "switch";
@@ -33,7 +33,7 @@ declare type BasicField = {
     required?: boolean;
 };
 export interface TextField extends BasicField {
-    type: "text" | "comment" | "divider" | "password" | "multiline";
+    type: "text" | "comment" | "divider" | "password" | "multiline" | "color";
 }
 export interface PickerField extends BasicField {
     type: "picker" | "qcm";
