@@ -29,7 +29,8 @@ type StringFieldType =
   | "picker"
   | "price"
   | "qcm"
-  | "link";
+  | "link"
+  | "color";
 
 type NumberFieldType = "mark";
 type DateFieldType = "date";
@@ -54,7 +55,7 @@ type BasicField = {
 };
 
 export interface TextField extends BasicField {
-  type: "text" | "comment" | "divider" | "password" | "multiline";
+  type: "text" | "comment" | "divider" | "password" | "multiline" | "color";
 }
 
 export interface PickerField extends BasicField {
