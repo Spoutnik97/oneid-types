@@ -1,24 +1,15 @@
 import { ActivityOrder } from "./activity";
+import { PaymentType } from "./payment";
 
 export interface Payment {
-  transactionIds?: string[];
-  amounts?: number[];
-  dates?: number[];
-  totalPaid: number;
-  totalToPay: number;
-  pending?: string;
-  tickets?: string[];
-}
-
-export type PaymentRequest = {
+  type: PaymentType;
   amount: number;
+  requestUuid: string;
+  transactionIdentifier: string;
   date: number;
-  oneid: string;
-  paymentTicket: string;
-  proservice: string;
-  request_uuid: string;
-  status: "done" | "waiting" | "failed";
-};
+  isPending: string;
+  ticket: string;
+}
 
 /**
  * User in the OneID app
@@ -50,5 +41,18 @@ export interface UserAccount {
   fields: {
     [key: string]: string;
   };
-  payment: Payment;
+  /**
+   * @deprecated use payments instead
+   */
+  payment?: {
+    transactionIds?: string[];
+    amounts?: number[];
+    dates?: number[];
+    totalPaid: number;
+    totalToPay: number;
+    pending?: string;
+    tickets?: string[];
+  };
+  totalToPay?: number;
+  payments?: Payment[];
 }
