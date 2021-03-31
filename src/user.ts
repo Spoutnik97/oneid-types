@@ -7,7 +7,7 @@ export interface Payment {
   requestUuid: string;
   transactionIdentifier: string;
   date: number;
-  isPending: string;
+  isPending: boolean;
   ticket: string;
 }
 
