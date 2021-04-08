@@ -4,7 +4,7 @@ export type PaymentType = "lydia" | "ancv";
  * @param recipient is a phone number for Lydia request, or ANCV n° for ANCV request
  * @param amount is an integer in cents (e.g. 2000 = 20 €)
  */
-export interface RequestPaymentAPI {
+export interface PaymentRequestAPI {
   type: PaymentType;
   proservice: string;
   oneid: string;
@@ -13,7 +13,18 @@ export interface RequestPaymentAPI {
   env?: "prod" | "dev";
 }
 
+export type PaymentResponseAPI =
+  | {
+      success: true;
+      paymentTicket: string;
+    }
+  | {
+      success: false;
+      message: string;
+    };
+
 export type PaymentRequest = {
+  type: PaymentType;
   amount: number;
   date: number;
   oneid: string;

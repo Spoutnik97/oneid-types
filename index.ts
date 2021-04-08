@@ -7,3 +7,4 @@ export * from "./src/user";
 export * from "./src/userpro";
 export * from "./src/activity";
 export * from "./src/payment";
+export * from "./src/lydia";
