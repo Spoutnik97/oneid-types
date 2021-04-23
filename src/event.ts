@@ -5,6 +5,7 @@ export type PaymentOptionsType = {
   mode: number;
   fixedPrice: number;
   vendorToken: string | null;
+  ancvShopId: string | null;
 };
 
 /**
