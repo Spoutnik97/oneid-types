@@ -4,6 +4,7 @@ export declare type PaymentOptionsType = {
     mode: number;
     fixedPrice: number;
     vendorToken: string | null;
+    ancvShopId: string | null;
 };
 /**
  * @param version if version is too low, user cannot sign up to the event
