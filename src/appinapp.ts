@@ -1,4 +1,4 @@
-import { PickerField } from "./field";
+import { PickerField, PriceField } from "./field";
 
 export enum AppInAppSectionTypes {
   news = "news",
@@ -28,7 +28,7 @@ export interface AllotmentCondition {
   key: string;
   label: string;
   value: string;
-  field: PickerField;
+  field: PickerField | PriceField;
 }
 
 export interface Member {
