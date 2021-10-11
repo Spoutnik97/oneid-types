@@ -42,7 +42,7 @@ export interface OneIDEvent {
 export declare type EventSettings = {
     teammates?: Teammate[];
     userCounter?: number;
-    optionsCounter?: Record<string, number>;
+    optionsCounter?: Record<string, Record<string, number>>;
     admin: string;
 };
 //# sourceMappingURL=event.d.ts.map
