@@ -39,6 +39,7 @@ export interface PickerField extends BasicField {
     type: "picker" | "qcm";
     values: string[];
     labels: string[];
+    limits?: number[];
 }
 export interface DocumentField extends BasicField {
     type: "document";
@@ -49,6 +50,7 @@ export interface PriceField extends BasicField {
     values: string[];
     labels: string[];
     prices: number[];
+    limits?: number[];
 }
 export interface NumberField extends BasicField {
     type: "mark";
