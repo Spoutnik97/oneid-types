@@ -4,6 +4,7 @@ import { PlanType, Teammate } from "./userpro";
 export type PaymentOptionsType = {
   mode: number;
   fixedPrice: number;
+  confirmationPrice?: number;
   vendorToken: string | null;
   ancvShopId: string | null;
 };
