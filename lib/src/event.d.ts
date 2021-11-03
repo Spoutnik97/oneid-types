@@ -3,6 +3,7 @@ import { PlanType, Teammate } from "./userpro";
 export declare type PaymentOptionsType = {
     mode: number;
     fixedPrice: number;
+    confirmationPrice?: number;
     vendorToken: string | null;
     ancvShopId: string | null;
 };
@@ -18,8 +19,8 @@ export interface OneIDEvent {
     logo: string;
     admin: string;
     askFields: OneIDField[];
-    isNotAsked: OneIDField[];
-    isNotRequired: OneIDField[];
+    isNotAsked?: OneIDField[];
+    isNotRequired?: OneIDField[];
     paymentOptions: PaymentOptionsType;
     idDocument: boolean;
     generateContract: boolean;
