@@ -21,8 +21,8 @@ export interface OneIDEvent {
   logo: string;
   admin: string; // uid of the administrator
   askFields: OneIDField[];
-  isNotAsked: OneIDField[]; // @deprecated
-  isNotRequired: OneIDField[]; // @deprecated
+  isNotAsked?: OneIDField[]; // @deprecated
+  isNotRequired?: OneIDField[]; // @deprecated
   paymentOptions: PaymentOptionsType;
   idDocument: boolean;
   generateContract: boolean;
