@@ -57,6 +57,7 @@ export interface UserPermissions {
 }
 
 export type PlanType = "standard" | "pro" | "premium";
+export type Role = "admin" | "user";
 
 export interface UserPro {
   uid: string;
@@ -64,6 +65,7 @@ export interface UserPro {
   email: string;
   plan: PlanType;
   idToken: string;
+  role?: Role;
   events: string[];
   eventsOptions?: {
     [proservice: string]: {
