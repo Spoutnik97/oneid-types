@@ -51,12 +51,14 @@ export interface UserPermissions {
     MANAGE_ALLOTMENTS?: boolean;
 }
 export declare type PlanType = "standard" | "pro" | "premium";
+export declare type Role = "admin" | "user";
 export interface UserPro {
     uid: string;
     oneid: string;
     email: string;
     plan: PlanType;
     idToken: string;
+    role?: Role;
     events: string[];
     eventsOptions?: {
         [proservice: string]: {
