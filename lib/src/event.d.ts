@@ -7,6 +7,14 @@ export declare type PaymentOptionsType = {
     vendorToken: string | null;
     ancvShopId: string | null;
 };
+export declare type TicketConfig = {
+    id: string;
+    type: "field" | "all" | "allotment";
+    fieldKey: string;
+    times: number;
+    values: string[];
+    timeMode: "any" | "eachDay";
+};
 /**
  * @param version if version is too low, user cannot sign up to the event
  */
@@ -39,6 +47,7 @@ export interface OneIDEvent {
     paymentDisabled?: boolean;
     backgroundUrl?: string;
     startTime?: number;
+    ticketsConfig?: TicketConfig[];
 }
 export declare type EventSettings = {
     teammates?: Teammate[];

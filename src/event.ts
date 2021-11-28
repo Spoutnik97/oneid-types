@@ -9,6 +9,15 @@ export type PaymentOptionsType = {
   ancvShopId: string | null;
 };
 
+export type TicketConfig = {
+  id: string;
+  type: "field" | "all" | "allotment";
+  fieldKey: string;
+  times: number;
+  values: string[];
+  timeMode: "any" | "eachDay";
+};
+
 /**
  * @param version if version is too low, user cannot sign up to the event
  */
@@ -42,6 +51,7 @@ export interface OneIDEvent {
   paymentDisabled?: boolean;
   backgroundUrl?: string;
   startTime?: number;
+  ticketsConfig?: TicketConfig[];
 }
 
 export type EventSettings = {

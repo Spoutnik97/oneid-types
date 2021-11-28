@@ -19,6 +19,20 @@ export interface User {
     events: string[];
     expoPushToken?: string;
 }
+export declare type StampedTicket = {
+    id: string;
+    timestamp: number;
+};
+export declare type UserAccountConfig = {
+    allotment?: {
+        id: string | null;
+        isValidated: boolean;
+    };
+    activities?: ActivityOrder[];
+    expoPushToken?: string;
+    nfcUid?: string;
+    stampedTickets?: StampedTicket[];
+};
 /**
  * @description when a user signup to an event
  */
@@ -26,15 +40,7 @@ export interface UserAccount {
     timestamp: number;
     oneid: string;
     proservice: string;
-    config: {
-        allotment?: {
-            id: string | null;
-            isValidated: boolean;
-        };
-        activities?: ActivityOrder[];
-        expoPushToken?: string;
-        nfcUid?: string;
-    };
+    config: UserAccountConfig;
     fields: {
         [key: string]: string;
     };
