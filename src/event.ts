@@ -9,14 +9,30 @@ export type PaymentOptionsType = {
   ancvShopId: string | null;
 };
 
-export type TicketConfig = {
+type TicketConfigBase = {
   id: string;
+  title: string;
   type: "field" | "all" | "allotment";
-  fieldKey: string;
   times: number;
-  values: string[];
   timeMode: "any" | "eachDay";
 };
+
+interface TicketConfigField extends TicketConfigBase {
+  type: "field";
+  fieldKey: string;
+  values: string[];
+}
+interface TicketConfigAll extends TicketConfigBase {
+  type: "all";
+}
+interface TicketConfigAllotment extends TicketConfigBase {
+  type: "allotment";
+}
+
+export type TicketConfig =
+  | TicketConfigField
+  | TicketConfigAll
+  | TicketConfigAllotment;
 
 /**
  * @param version if version is too low, user cannot sign up to the event
