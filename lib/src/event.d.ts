@@ -7,14 +7,25 @@ export declare type PaymentOptionsType = {
     vendorToken: string | null;
     ancvShopId: string | null;
 };
-export declare type TicketConfig = {
+declare type TicketConfigBase = {
     id: string;
+    title: string;
     type: "field" | "all" | "allotment";
-    fieldKey: string;
     times: number;
-    values: string[];
     timeMode: "any" | "eachDay";
 };
+interface TicketConfigField extends TicketConfigBase {
+    type: "field";
+    fieldKey: string;
+    values: string[];
+}
+interface TicketConfigAll extends TicketConfigBase {
+    type: "all";
+}
+interface TicketConfigAllotment extends TicketConfigBase {
+    type: "allotment";
+}
+export declare type TicketConfig = TicketConfigField | TicketConfigAll | TicketConfigAllotment;
 /**
  * @param version if version is too low, user cannot sign up to the event
  */
@@ -55,4 +66,5 @@ export declare type EventSettings = {
     optionsCounter?: Record<string, Record<string, number>>;
     admin: string;
 };
+export {};
 //# sourceMappingURL=event.d.ts.map
