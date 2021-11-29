@@ -14,15 +14,15 @@ declare type TicketConfigBase = {
     times: number;
     timeMode: "any" | "eachDay";
 };
-interface TicketConfigField extends TicketConfigBase {
+export interface TicketConfigField extends TicketConfigBase {
     type: "field";
     fieldKey: string;
     values: string[];
 }
-interface TicketConfigAll extends TicketConfigBase {
+export interface TicketConfigAll extends TicketConfigBase {
     type: "all";
 }
-interface TicketConfigAllotment extends TicketConfigBase {
+export interface TicketConfigAllotment extends TicketConfigBase {
     type: "allotment";
 }
 export declare type TicketConfig = TicketConfigField | TicketConfigAll | TicketConfigAllotment;
