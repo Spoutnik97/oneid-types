@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "yarn tsc",
-    "deploy": "yarn build && git commit -a -m 'built files' && yarn version && git push"
+    "deploy": "yarn build && git commit -a -m 'built files' && yarn version && git push --follow-tags"
   },
   "dependencies": {
     "typescript": "^4.1.2"
