@@ -31,6 +31,7 @@ declare type BasicField = {
     key: string;
     title: string;
     required?: boolean;
+    isLocked?: boolean;
 };
 export interface TextField extends BasicField {
     type: "text" | "comment" | "divider" | "password" | "multiline" | "color";

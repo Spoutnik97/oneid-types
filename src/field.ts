@@ -52,6 +52,7 @@ type BasicField = {
   key: string;
   title: string;
   required?: boolean;
+  isLocked?: boolean;
 };
 
 export interface TextField extends BasicField {
