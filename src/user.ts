@@ -49,18 +49,5 @@ export interface UserAccount {
   fields: {
     [key: string]: string;
   };
-  /**
-   * @deprecated use payments instead
-   */
-  payment?: {
-    transactionIds?: string[];
-    amounts?: number[];
-    dates?: number[];
-    totalPaid: number;
-    totalToPay: number;
-    pending?: string;
-    tickets?: string[];
-  };
-  totalToPay?: number;
   payments?: Payment[];
 }
