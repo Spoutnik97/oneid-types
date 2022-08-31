@@ -1,4 +1,4 @@
-export type PaymentType = "lydia" | "ancv";
+export type PaymentType = "lydia" | "ancv" | "helloasso";
 
 /**
  * @param recipient is a phone number for Lydia request, or ANCV n° for ANCV request
