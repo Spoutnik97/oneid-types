@@ -6,6 +6,8 @@ export declare type PaymentOptionsType = {
     confirmationPrice?: number;
     vendorToken: string | null;
     ancvShopId: string | null;
+    helloAssoClientId: string | null;
+    helloAssoClientSecret: string | null;
 };
 declare type TicketConfigBase = {
     id: string;

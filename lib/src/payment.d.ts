@@ -1,4 +1,4 @@
-export declare type PaymentType = "lydia" | "ancv";
+export declare type PaymentType = "lydia" | "ancv" | "helloasso";
 /**
  * @param recipient is a phone number for Lydia request, or ANCV n° for ANCV request
  * @param amount is an integer in cents (e.g. 2000 = 20 €)

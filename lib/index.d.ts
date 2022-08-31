@@ -8,4 +8,5 @@ export * from "./src/userpro";
 export * from "./src/activity";
 export * from "./src/payment";
 export * from "./src/lydia";
+export * from "./src/helloAsso";
 //# sourceMappingURL=index.d.ts.map
