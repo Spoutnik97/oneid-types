@@ -1,5 +1,16 @@
 export type PaymentType = "lydia" | "ancv" | "helloasso";
 
+export type MetadataPaymentRequestAPI = {
+  firstName: string;
+  lastName: string;
+  email: string;
+  dateOfBirth: string;
+  address: string;
+  city: string;
+  zipCode: string;
+  country: string;
+};
+
 /**
  * @param recipient is a phone number for Lydia request, or ANCV n° for ANCV request
  * @param amount is an integer in cents (e.g. 2000 = 20 €)
@@ -11,12 +22,14 @@ export interface PaymentRequestAPI {
   recipient: string;
   amount: number;
   env?: "prod" | "dev";
+  metadata?: MetadataPaymentRequestAPI;
 }
 
 export type PaymentResponseAPI =
   | {
       success: true;
       paymentTicket: string;
+      url?: string;
     }
   | {
       success: false;
