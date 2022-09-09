@@ -12,6 +12,7 @@ export declare type MetadataPaymentRequestAPI = {
 /**
  * @param recipient is a phone number for Lydia request, or ANCV n° for ANCV request
  * @param amount is an integer in cents (e.g. 2000 = 20 €)
+ * @param metadata is a stringified @MetadataPaymentRequestAPI
  */
 export interface PaymentRequestAPI {
     type: PaymentType;
@@ -20,7 +21,7 @@ export interface PaymentRequestAPI {
     recipient: string;
     amount: number;
     env?: "prod" | "dev";
-    metadata?: MetadataPaymentRequestAPI;
+    metadata?: string;
 }
 export declare type PaymentResponseAPI = {
     success: true;
